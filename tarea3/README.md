@@ -29,14 +29,14 @@ You can compile the project using a C++ compiler like g++.
    Open a terminal and run the following command to compile all `.cpp` files:
 
    ```sh
-   g++ main.cpp zoomba.cpp -o zoomba_simulation
+   g++ main.cpp zoomba.cpp -I ../include -o zoomba
    ```
 
 2. **Run the simulation:**
    Once compiled, you can run the program with the following command:
 
    ```sh
-   ./zoomba_simulation
+   ./zoomba
    ```
 
 The program will run simulations on three example maps (small, medium, and complex) and display the traversal and energy consumed for each one.
