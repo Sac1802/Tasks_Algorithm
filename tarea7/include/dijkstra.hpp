@@ -11,8 +11,8 @@ class Dijkstra
 public:
     struct ResultadoDijkstra
     {
-        std::vector<int> distancias;
-        std::vector<int> padres;
+        std::vector<int> ditances;
+        std::vector<int> parents;
         int iterations;
     };
     ResultadoDijkstra dijkstra(std::vector<std::vector<std::pair<int, int>>> &adj, int src);

@@ -26,7 +26,7 @@ int main(void)
 
     Dijkstra::ResultadoDijkstra res = dijkstra.dijkstra(adj, map.initialPosition);
 
-    if (res.distancias[map.endPosition] == INT_MAX)
+    if (res.ditances[map.endPosition] == INT_MAX)
     {
         std::cout << "No se encontró un camino." << std::endl;
         std::cout << "Iteraciones realizadas: " << res.iterations << std::endl;
@@ -39,7 +39,7 @@ int main(void)
     while (actual != -1)
     {
         camino.push_back(actual);
-        actual = res.padres[actual];
+        actual = res.parents[actual];
     }
 
     std::reverse(camino.begin(), camino.end());
@@ -60,7 +60,7 @@ int main(void)
     else
     {
         std::cout << "\n--- Dijkstra ---" << std::endl;
-        std::cout << "Costo del camino: " << res.distancias[map.endPosition] << std::endl;
+        std::cout << "Costo del camino: " << res.ditances[map.endPosition] << std::endl;
         std::cout << "Iteraciones realizadas: " << res.iterations << std::endl;
         std::cout << "\n--- BFS ---" << std::endl;
         std::cout << "Costo del camino: " << resBFS.distance[map.endPosition] << std::endl;
